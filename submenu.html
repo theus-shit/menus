@@ -4,18 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .menu {
+			/**/
+			list-style: none;
+			/*tira a bolinha da lista principal*/
+			float: left;
+			/*posiciona a esquerda*/
+			padding: 0px 20px 0px 5px;
+			line-height: 1.5;
+			font-family: Helvetica;
+			display: inline;
+		}
+
+		.menu li {
+			/*itens da lista principal do menu*/
+			position: relative;
+			float: left;
+		}
+
+		.menu li ul {
+			position: absolute;
+			top: 25px;
+			/*left:0;*/
+			background-color: #fff;
+			display: none;
+		}
+
+		.menu li a {
+			color: #333;
+			text-decoration: none;
+			/*tirar o sublinhado e link*/
+			padding: 5px 30px;
+			display: block;
+		}
+
+		.menu li a:hover {
+			background: #333;
+			color: #fff;
+		}
+
+		.menu li:hover ul,
+		.menu li.over ul {
+			display: block;
+		}
+
+		.menu li ul li {
+			/*formatacao na sublista*/
+			border: 1px solid #c0c0c0;
+			display: block;
+			width: 150px;
+		}
+    </style>
 </head>
 <body>
     <nav>
         <ul class="menu">
             <li> <a href="#"> Home </a></li>
             <li> <a href="#">Sobre</a></li>
-            <li><a href="#">O que fazemos</a></li>
-        <ul>
-        <li><a href="#"> web Desing</a></li>
-        <li><a href="#"> SEO</a></li>
-        <li><a href="#"> Desing</a></li>
-        </ul>
+            <li><a href="#">O que fazemos</a>
+                <ul>
+                    <li><a href="#"> web Desing</a></li>
+                    <li><a href="#"> SEO</a></li>
+                    <li><a href="#"> Desing</a></li>
+                </ul>
+            </li>
         <li><a href="#"> Links</a></li>
         <li><a href="#">Contato</a></li>
         </ul>
